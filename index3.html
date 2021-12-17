@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Eventos</title>
+
+    <!-- DOM EVENTOS pt 1
+    <script>
+        function h2click(){
+            console.log("Executando a função")
+        }
+    </script> 
+
+    <script>
+        function changeH1(input){
+            
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerText = input.value;
+        }
+
+        function hideH1(){
+            let h1 = document.getElementsByTagName("h1")[0]
+        h1.style.display = "none"        }
+
+    </script>
+
+    <style>
+        div {
+            display: inline-block;
+            padding: 20px;
+            font-size: 2rem;
+            background-color: darkslateblue;
+            color: black;
+        }
+    </style>
+    -->
+
+
+    <!-- DOM EVENTOS pt 2
+    <style>
+        img {
+            width: 200px;
+            margin-bottom: 25px;
+        }
+
+        div {
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function onOver(elemento){
+            elemento.style.backgroundColor = "red"
+        }
+
+        function onOut (elemento){
+            elemento.style.backgroundColor = "blueviolet" 
+        }
+    </script>
+    -->
+
+    <!--     DOM EVENTOS pt 3    -->
+    <script>
+        function Loaded() {
+            let t = document.getElementById("titulo")
+
+           // t.onclick = mudarText;
+           t.addEventListener("click", mudarText)
+        }
+
+        function mudarText() {
+            this.innerHTML = "Novo texto"
+        }
+
+
+    </script>
+
+</head>
+
+<body onload="Loaded()">
+    
+    <!-- DOM EVENTOS pt 1
+     <h1 onclick="console.log('H1 foi clicado')">Clique Aqui</h1> 
+     <h2 onclick="h2click()">Clique Aqui</h2> 
+     <h2 onclick="this.style.color = 'red'">Clique Aqui</h2> 
+     
+    <h1>Clique aqui</h1>
+    <input type="text" onchange="changeH1(this)"><br><br>
+
+    <div onclick="hideH1()">Bottom</div> 
+    -->
+
+    <!-- DOM EVENTOS pt 2
+    <img src="https://cdnm.westwing.com.br/glossary/uploads/br/2015/09/02133042/ch%C3%A3o-de-madeira-com-velas-de-natal-enfeites-e-%C3%A1rvore_c-a1753.jpg">
+    <br> 
+    <div onmouseover="onOver(this)"onmouseout="onOut(this)">Click</div> 
+    -->
+
+    
+    <!--     DOM EVENTOS pt 3    -->
+    <h1 id="titulo">Title</h1>
+
+</body>
+
+</html>
