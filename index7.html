@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+
+    <script>
+        function sortear() {
+            let np = 100;
+            let ns = Math.round(Math.random() * np);
+            document.getElementById("d").innerHTML = ns
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: greenyellow
+        }
+            button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #conjunto {
+            text-align: center;
+            font-size: 22px; 
+        }
+
+    
+
+    </style>
+
+</head>
+
+<body>
+    <div id="conjunto">
+    <h1 id="d"></h1>
+    Clique no botão abaixo para sortear um número de 1 a 100<br><br>
+    <button onclick="sortear()">Sortear</button>
+    </div>
+    
+</body>
+
+</html>
