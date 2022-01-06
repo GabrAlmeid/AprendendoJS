@@ -34,6 +34,9 @@ inserirUsuario("Camila")
 })
 */
 
+// Async await
+
+
 let usuarios = ["Anna", "Gabriel", "Eduardo"];
 
 function inserirUsuario(nome){
