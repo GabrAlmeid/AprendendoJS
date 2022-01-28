@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpye_KQEU2wlBVmv6ndCANXeJHmWg1ixI",
+            authDomain: "colegio-2d374.firebaseapp.com",
+            projectId: "colegio-2d374",
+            storageBucket: "colegio-2d374.appspot.com",
+            messagingSenderId: "120708773033",
+            appId: "1:120708773033:web:6fef0e6d311247536ba5b8",
+            measurementId: "G-3N2DFQW3RT"
+        };
+
+        firebase.initializeApp(firebaseConfig)
+
+        const TURMA = "turmaA"
+        const db = firebase.firestore()
+
+        // db.collection(TURMA).add({
+        //     nome: "Marcos",
+        //     sobrenome: "Paulo",
+        //     notas: {nota1: 9.6, nota2: 7.5},
+        // }).then((doc) =>{
+        //     console.log("Documento inserido com sucesso:", doc);
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+
+        // db.collection(TURMA).doc("NovoAluno").set({
+        //     nome: "Matheus",
+        //     sobrenome: "Xavier",
+        //     notas: {nota1: 2.6, nota2: 7.5},
+        // }).then(() =>{
+        //     console.log("Documento inserido com sucesso");
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+
+        // db.collection(TURMA).doc("0zPLrYHhwdK7Gxjolh5V").set({
+        //     nome: "Gabriel",
+        //     sobrenome: "Almeida",
+        //     notas: {nota1: 9.6, nota2: 6.5, nota3: 8},
+        // }, {merge: true}
+        // ).then(() =>{
+        //     console.log("Documento inserido com sucesso");
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+
+        // db.collection(TURMA).doc("y4gFxUctGDDgT8gxcv93").update({
+
+        //     "notas.nota1": 7,
+        //     faltas: 5,
+        //     cidades: ["São Paulo", "Acre", "Amapa"],
+        //     cidades: firebase.firestore.FieldValue.arrayUnion("Rio de janeiro", "Coritiba"),
+        //     cidades: firebase.firestore.FieldValue.arrayRemove("Acre", "Amapa"),
+        //     faltas: firebase.firestore.FieldValue.increment(1)
+        // }).then(() =>{
+        //     console.log("Documento inserido com sucesso");
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+
+        db.collection("turmaA").onSnapshot((snapshot) => {
+                snapshot.forEach((doc) => {
+                    let aluno = doc.data();
+                    console.log(aluno)
+                })
+            
+            })
+    </script>
+</body>
+
+</html>
