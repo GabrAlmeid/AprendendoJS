@@ -24,12 +24,12 @@ console.log (aluno)
 
 
 
+
 /* Métodos
 
 function calMed (){
     return (this.notas [0] + this.notas [1]) / 2
 }
-
 
 var aluno = {
     nome: "Gabriel",
@@ -38,14 +38,12 @@ var aluno = {
     media: calMed
 }
 
-
 var aluno2 = {
     nome: "Maria",
     notas: [8, 6],
 
     media: calMed
 }
-
 
 console.log (aluno.nome);
 console.log (aluno.media());
@@ -86,7 +84,6 @@ turma.forEach(function (elemento){
 ) 
 
 ----------------------------------------
-*/
 
 function aluno(nome, n1, n2){
 
@@ -103,6 +100,6 @@ var a = new aluno ("Gabriel", 8, 9);
 var b = new aluno ("João", 6, 9);
 
 console.log(b);
-
+*/
 
 

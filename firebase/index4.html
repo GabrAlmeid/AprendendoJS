@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpye_KQEU2wlBVmv6ndCANXeJHmWg1ixI",
+            authDomain: "colegio-2d374.firebaseapp.com",
+            projectId: "colegio-2d374",
+            storageBucket: "colegio-2d374.appspot.com",
+            messagingSenderId: "120708773033",
+            appId: "1:120708773033:web:6fef0e6d311247536ba5b8",
+            measurementId: "G-3N2DFQW3RT"
+        };
+
+        firebase.initializeApp(firebaseConfig)
+        const db = firebase.firestore()
+        
+        db.collection("Lista").get().then(snapshot =>{
+            snapshot.forEach(item => {
+                console.log(item.data());
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>
