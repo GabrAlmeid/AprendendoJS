@@ -330,7 +330,7 @@ console.log(celular)
 */
 
 
-// Natureza dinamica de objetos
+/* Natureza dinamica de objetos
 
 
 const mouse = {
@@ -343,7 +343,48 @@ mouse.trocarDPI = function(){
 }
 delete mouse.velocidade
 console.log(mouse)
+*/
 
 
+/* Clonando objetos
 
 
+const celular = {
+    marcaCelular : 'ASUS',
+    tamanhoTela : {
+        vertical: 155,
+        horizontal: 75
+    },
+    ligar: function () {
+        console.log("Fazendo Ligação...")
+    }
+}
+
+const novoObjeto = Object.assign({
+    bateria: 5000
+}, celular);
+console.log(novoObjeto)
+
+const objeto2 = {...celular};
+console.log(objeto2)
+*/
+
+
+/* Template Literal 
+
+
+const mensagem = 'Oi essa é minha\n \'primeira\' mensagem'
+console.log(mensagem)
+const outraMsg = `Oi essa é minha 
+"segunda" mensagem`
+console.log(outraMsg)
+*/
+
+
+/* Date
+
+
+const data1 = new Date()
+const data2 = new Date("February 17 2022 21:20")
+const data3 = new Date (2022, 01, 06, 9, 30)
+*/
