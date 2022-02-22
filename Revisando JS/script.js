@@ -388,3 +388,140 @@ const data1 = new Date()
 const data2 = new Date("February 17 2022 21:20")
 const data3 = new Date (2022, 01, 06, 9, 30)
 */
+
+
+/* Adicionando elementos em um Array
+
+
+const numeros = [1,2,3]
+
+numeros.unshift(0)
+numeros.splice(2,0, 1.5)
+numeros.push(4)
+console.log(numeros)
+*/
+
+
+/* Encontrando elementos (primitivos)
+
+
+const numeros = [1, 2, 3, 4, 1]
+//console.log(numeros.lastIndexOf(1))
+//console.log(numeros.indexOf(1) !== -1)
+console.log(numeros.includes(1))
+*/
+
+
+/* Encontrando elementos (Tipos de referencia)
+
+
+const marcas = [
+    {id: 1, nome: "a"},
+    {id: 2, nome: "b"}
+];
+
+const marca = marcas.find(function(marca){
+    return marca.nome === "a"
+})
+
+console.log(marca)
+*/
+
+
+/* Arrow functions
+
+
+const marcas = [
+    {id: 1, nome: "a"},
+    {id: 2, nome: "b"}
+];
+
+console.log(marcas.find(marca => marca.nome === "a" ));
+*/
+
+
+/* Removendo elementos de um Array
+
+
+const numeros = [1,2,3,4,5,6];
+
+const ultimo = numeros.pop() 
+const primeiro = numeros.shift()
+const meio = numeros.splice(2,1)
+console.log(numeros)
+*/
+
+
+/* Esvaziando um Array
+
+
+const numeros = [1,2,3,4,5,6];
+// primeira maneira
+numeros = [];
+// segunda maneira (melhor maneira)
+numeros.length = 0
+// terceira maneira
+numeros.splice(0, numeros.length)
+// quarta maneira
+while (numeros.length > 0)
+numeros.pop()
+console.log(numeros)
+*/
+
+
+/* Combinando e dividindo um Array 
+
+
+const primeiro = [1,2,3];
+const segundo = [4,5,6];
+// combinar
+const combinado = primeiro.concat(segundo)
+// dividir 
+const dividido = combinado.slice(1,3)
+console.log(dividido)
+*/ 
+
+
+/* Operador Spread
+
+
+const primeiro = [1,2,3];
+const segundo = [4,5,6];
+
+const combinado = [...primeiro,...segundo]
+console.log(combinado)
+const clonado = [...combinado]
+console.log(clonado)
+*/
+
+
+/* ForEach 
+
+
+const numeros = [1,2,3,4,5]
+numeros.forEach((numero, indice) => console.log(numero, indice))
+*/
+
+
+/* Combinando Arrays
+
+
+const numeros = [1,2,3,4,5]
+
+const combinado = numeros.join(".")
+console.log(combinado)
+
+const frase = "Seja bem vindo ao curso"
+const resultado =  frase.split(" ")
+console.log(resultado)
+*/
+
+
+/* Recebendo dados (Input)
+
+
+let nome = prompt("Olá, qual o seu nome?")
+if (nome = "Gabriel"){
+    alert("Seja bem-vindo Gabriel")
+}
+*/
